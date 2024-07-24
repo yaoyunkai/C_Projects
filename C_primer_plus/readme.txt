@@ -11,3 +11,8 @@ printf  %lu 表示:
 
 int  long short unsigned char float double // signed void
 
+printf 格式化 https://zh.cppreference.com/w/c/io/fprintf
+
+
+stdint.h和inttypes.h
+

@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "head.h"
 
-int platinum(void) {
+int platinum(void)
+{
     float weight;
 
     printf("Are you worth your weight in platinum?\n");
@@ -18,9 +19,14 @@ int platinum(void) {
     return 0;
 }
 
-void show_int_range() {
-    printf("int size: %lu byte\n", sizeof(int));
-    printf("short size: %lu byte\n", sizeof(short int));
-    printf("long size: %lu byte\n", sizeof(long int));
-    printf("long long size: %lu byte\n", sizeof(long long int));
+void show_int_range()
+{   
+    int num = 443;
+    printf("the num is %d \n", num);
+    printf("the pointer of num is %p \n", &num);
+
+    printf("int size: %lld byte\n", sizeof(int));
+    printf("short size: %lld byte\n", sizeof(short int));
+    printf("long size: %lld byte\n", sizeof(long int));
+    printf("long long size: %lld byte\n", sizeof(long long int));
 }

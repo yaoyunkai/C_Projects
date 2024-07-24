@@ -12,5 +12,11 @@ int main(void) {
 
     // platinum();
 
-    show_int_range();
+    // show_int_range();
+    // show_diff_numbers_and_format();
+    // show_int_overflow();
+
+    // char_usage();
+
+    use_stdint_and_inttype();
 }

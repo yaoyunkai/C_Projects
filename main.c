@@ -3,20 +3,19 @@
 
 #include "C_primer_plus/head.h"
 
-int main(void) {
+
+int main(void)
+{
 #if defined(WIN32)
     printf("*** running from win32 platform ***\n");
     system("chcp 65001");
+    // system("chcp");
     printf("\n");
 #endif
 
-    // platinum();
 
-    // show_int_range();
-    // show_diff_numbers_and_format();
-    // show_int_overflow();
+    // print_float_bits(3.1415926f);
+    // print_double_bits(3.141592653589793238);
 
-    // char_usage();
-
-    use_stdint_and_inttype();
+    praise2();
 }

@@ -5,7 +5,8 @@
 
 #include "head.h"
 
-int platinum(void) {
+int platinum(void)
+{
     float weight;
 
     printf("Are you worth your weight in platinum?\n");
@@ -22,7 +23,8 @@ int platinum(void) {
     return 0;
 }
 
-void show_int_range() {
+void show_int_range()
+{
     printf("int size: %lu byte\n", sizeof(int));
     printf("short size: %lu byte\n", sizeof(short int));
     printf("long size: %lu byte\n", sizeof(long int));
@@ -31,7 +33,8 @@ void show_int_range() {
 
 
 /* bases.c--以十进制、八进制、十六进制打印十进制数100 */
-int show_diff_numbers_and_format() {
+int show_diff_numbers_and_format()
+{
     long int estine;
     long johns;
     short int erns;
@@ -61,7 +64,8 @@ int show_diff_numbers_and_format() {
     return 0;
 }
 
-void show_int_overflow() {
+void show_int_overflow()
+{
     int i = 2147483647;
     unsigned int j = 4294967295;
 
@@ -70,7 +74,8 @@ void show_int_overflow() {
 }
 
 
-void char_usage() {
+void char_usage()
+{
     char a, b, c;
     a = 'A';
     b = 66;
@@ -80,7 +85,8 @@ void char_usage() {
 }
 
 
-int use_stdint_and_inttype(void) {
+int use_stdint_and_inttype(void)
+{
     // me32是一个32位有符号整型变量
     int32_t me32 = 45933945;
     printf("First, assume int32_t is int: ");
@@ -90,4 +96,40 @@ int use_stdint_and_inttype(void) {
     printf("me32 = %" PRId32 "\n", me32);
 
     return 0;
+}
+
+void use_float_double()
+{
+    // float noah, jonah;
+    // double trouble;
+    // float planck = 6.63e-34;
+    // long double gnp;
+    printf("long double: %lu byte\n", sizeof(long double));
+    printf("     double: %lu byte\n", sizeof(double));
+
+    float aboat = 32000.0;
+    double abet = 2.14e9;
+    long double dip = 5.32e-5;
+
+    double num1 = 0.30 - 0.29;
+
+    printf("%f can be written %e\n", aboat, aboat);
+    printf("And it's %a in hexadecimal, powers of 2 notation\n", aboat);
+    printf("%f can be written %e\n", abet, abet);
+    printf("%Lf can be written %Le\n", dip, dip);
+
+    printf("num1 is %f \n", num1);
+
+    float toobig = 3.4E38 * 100.0f;
+    printf("%e\n", toobig); //  inf
+
+    // print_float_bits(toobig);
+    // print_float_bits(3.14F);
+    // print_double_bits(3.14);
+
+    // 舍入错误
+
+    float b = 2.0e20 + 1.0;
+    float a = b - 2.0e20;
+    printf("%f \n", a);
 }

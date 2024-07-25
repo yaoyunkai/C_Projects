@@ -6,6 +6,8 @@ set(CMAKE_C_STANDARD 11)
 add_executable(Simple1
         main.c
         C_primer_plus/head.h
+        C_primer_plus/print_float_bits.c
         C_primer_plus/chapter3.c
+        C_primer_plus/chapter4.c
 
 )

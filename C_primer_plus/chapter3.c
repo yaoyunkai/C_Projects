@@ -33,12 +33,6 @@ void show_int_range()
     printf("short size: %lld byte\n", sizeof(short int));
     printf("long size: %lld byte\n", sizeof(long int));
     printf("long long size: %lld byte\n", sizeof(long long int));
-void show_int_range()
-{
-    printf("int size: %lu byte\n", sizeof(int));
-    printf("short size: %lu byte\n", sizeof(short int));
-    printf("long size: %lu byte\n", sizeof(long int));
-    printf("long long size: %lu byte\n", sizeof(long long int));
 }
 
 

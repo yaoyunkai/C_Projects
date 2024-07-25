@@ -35,4 +35,7 @@ void talkback();
 
 int praise2(void);
 
+
+void pizza();
+
 #endif //HEAD_H

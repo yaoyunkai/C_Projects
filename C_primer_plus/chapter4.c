@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
-#define DENSITY 62.4     // 人体密度（单位：磅/立方英尺）
+#define PI 3.14159
+#define DENSITY 62.4
 #define PRAISE "You are an extraordinary being."
 
 void talkback()
 {
     float weight, volume;
     int size, letters;
-    char name[40]; // name是一个可容纳40个字符的数组
+    char name[40];
 
     printf("Hi! What's your first name?\n");
     scanf_s("%s", name, sizeof(name));
@@ -39,4 +40,18 @@ int praise2(void)
     printf("and occupies %zd memory cells.\n", sizeof PRAISE);
 
     return 0;
+}
+
+
+/* pizza.c -- 在比萨饼程序中使用已定义的常量 */
+void pizza()
+{
+    float area, circum, radius;
+
+    printf("你的披萨的半径是: \n");
+    scanf_s("%f", &radius);
+    area = PI * radius * radius;
+    circum = 2.0 * PI * radius;
+    printf("Your basic pizza parameters are as follows:\n");
+    printf("周长 = %1.2f, 面积 = %1.2f\n", circum, area);
 }

@@ -8,6 +8,7 @@ printf  %lu 表示:
     %u表示无符号10进制整型，
     %lu表示输出无符号长整型整数
 
+    为sizeof运算符的返回类型添加了%zd转换说明
 
 int  long short unsigned char float double // signed void
 

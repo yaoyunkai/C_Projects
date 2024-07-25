@@ -3,6 +3,8 @@ project(Simple1 C)
 
 set(CMAKE_C_STANDARD 11)
 
+#set(CMAKE_CXX_CHARSET "UTF-8")
+
 add_executable(Simple1
         main.c
         C_primer_plus/head.h

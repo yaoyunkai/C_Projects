@@ -1,11 +1,6 @@
-#ifndef HEAD_H
-#define HEAD_H
+#pragma once
 
-/*
-
-chapter3
-
-*/
+// chapter3
 
 int platinum(void);
 
@@ -25,17 +20,14 @@ void print_float_bits(float f);
 
 void print_double_bits(double d);
 
-/*
-
-chapter4
-
-*/
+// chapter4
 
 void talkback();
 
 int praise2(void);
 
-
 void pizza();
 
-#endif //HEAD_H
+void show_limits();
+
+void printf_usage();

@@ -1,3 +1,8 @@
+ctrl + F9  build for clion
+
+
+------------------------------------
+
 1. 声明
 
 const 关键字
@@ -18,3 +23,7 @@ printf 格式化 https://zh.cppreference.com/w/c/io/fprintf
 
 stdint.h和inttypes.h
 
+
+ limits.h和float.h分别提供了与整数类型和浮点类型大小限制相关的详细信息。
+
+size_t 称为 underlying type

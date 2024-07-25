@@ -1,6 +1,9 @@
+#include <limits.h>
 #include <stdio.h>
 #include <string.h>
+#include <float.h>
 
+#define PAGES 959
 #define PI 3.14159
 #define DENSITY 62.4
 #define PRAISE "You are an extraordinary being."
@@ -26,7 +29,10 @@ void talkback()
     printf("and we have %d bytes to store it.\n", size);
 }
 
-
+/*
+ * 中文注释
+ *
+ */
 int praise2(void)
 {
     char name[40];
@@ -43,7 +49,6 @@ int praise2(void)
 }
 
 
-/* pizza.c -- 在比萨饼程序中使用已定义的常量 */
 void pizza()
 {
     float area, circum, radius;
@@ -54,4 +59,41 @@ void pizza()
     circum = 2.0 * PI * radius;
     printf("Your basic pizza parameters are as follows:\n");
     printf("周长 = %1.2f, 面积 = %1.2f\n", circum, area);
+}
+
+
+void show_limits()
+{
+    printf("Maximum int value on this system = %d\n", INT_MAX);
+
+    printf("Some number limits for this system:\n");
+    printf("Biggest int: %d\n", INT_MAX);
+    printf("Smallest long long: %lld\n", LLONG_MIN);
+    printf("One byte = %d bits on this system.\n", CHAR_BIT);
+    printf("Largest double: %e\n", DBL_MAX);
+    printf("Smallest normal float: %e\n", FLT_MIN);
+    printf("float precision = %d digits\n", FLT_DIG);
+    printf("float epsilon = %e\n", FLT_EPSILON);
+}
+
+
+void printf_usage()
+{
+    int number = 7;
+    float pies = 12.75;
+    int cost = 7800;
+
+    printf("The %d contestants ate %f berry pies.\n", number, pies);
+    printf("The value of pi is %f.\n", PI);
+    printf("Farewell! thou art too dear for my possessing,\n");
+    printf("%c%d\n", '$', 2 * cost);
+
+    // printf("The score was Squids %d, Slugs %d.\n", cost);
+
+    printf("abc---------------\n");
+    printf("*%d*\n", PAGES);
+
+    printf("*%2d*\n", PAGES);
+    printf("*%+10d*\n", PAGES);
+    printf("*%-10d*\n", PAGES);
 }

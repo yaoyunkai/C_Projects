@@ -13,10 +13,5 @@ int main(void)
     printf("\n");
 #endif
 
-
-    // print_float_bits(3.1415926f);
-    //print_double_bits(3.141592653589793238);
-
-    // praise2();
-     pizza();
+    printf_usage();
 }

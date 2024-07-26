@@ -91,6 +91,7 @@ void printf_usage()
     // printf("The score was Squids %d, Slugs %d.\n", cost);
 
     printf("abc---------------\n");
+    printf("这是一段中文\n");
     printf("*%d*\n", PAGES);
 
     printf("*%2d*\n", PAGES);

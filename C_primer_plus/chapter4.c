@@ -29,10 +29,6 @@ void talkback()
     printf("and we have %d bytes to store it.\n", size);
 }
 
-/*
- * 中文注释
- *
- */
 int praise2(void)
 {
     char name[40];
@@ -88,10 +84,9 @@ void printf_usage()
     printf("Farewell! thou art too dear for my possessing,\n");
     printf("%c%d\n", '$', 2 * cost);
 
-    // printf("The score was Squids %d, Slugs %d.\n", cost);
-
     printf("abc---------------\n");
-    printf("这是一段中文\n");
+    printf("---- this is a Chinese Text ---- \n");
+
     printf("*%d*\n", PAGES);
 
     printf("*%2d*\n", PAGES);

@@ -1,6 +1,7 @@
 #pragma once
 
 // chapter3
+#include <stdint.h>
 
 int platinum(void);
 
@@ -31,3 +32,6 @@ void pizza();
 void show_limits();
 
 void printf_usage();
+
+
+uint64_t crc64(uint64_t crc, const unsigned char *s, uint64_t l);

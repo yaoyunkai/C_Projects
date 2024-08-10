@@ -1,7 +1,8 @@
 #pragma once
 
-// chapter3
+#include <stddef.h>
 #include <stdint.h>
+#include <limits.h>
 
 int platinum(void);
 
@@ -35,3 +36,5 @@ void printf_usage();
 
 
 uint64_t crc64(uint64_t crc, const unsigned char *s, uint64_t l);
+
+int string2ll(const char *s, size_t slen, int64_t *value);

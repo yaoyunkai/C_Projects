@@ -14,4 +14,5 @@ int main(void)
 #endif
 
     printf_usage();
+
 }

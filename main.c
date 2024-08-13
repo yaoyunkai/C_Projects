@@ -13,6 +13,9 @@ int main(void)
     printf("\n");
 #endif
 
-    printf_usage();
+    // print_squares();
 
+    // wheat();
+
+    sizet_usage();
 }

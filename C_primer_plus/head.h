@@ -38,3 +38,15 @@ void printf_usage();
 uint64_t crc64(uint64_t crc, const unsigned char *s, uint64_t l);
 
 int string2ll(const char *s, size_t slen, int64_t *value);
+
+void printf_float_usage();
+
+void show_printf_return_value();
+
+void use_scanf();
+
+void print_squares();
+
+int wheat(void);
+
+void sizet_usage();

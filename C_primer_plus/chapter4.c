@@ -93,3 +93,39 @@ void printf_usage()
     printf("*%+10d*\n", PAGES);
     printf("*%-10d*\n", PAGES);
 }
+
+void printf_float_usage()
+{
+    const double RENT = 3852.99; // const变量
+
+    printf("*%f*\n", RENT);
+    printf("*%e*\n", RENT);
+    printf("*%4.2f*\n", RENT);
+    printf("*%3.1f*\n", RENT);
+    printf("*%10.3f*\n", RENT);
+    printf("*%10.3E*\n", RENT);
+    printf("*%+4.2f*\n", RENT);
+    printf("*%010.2f*\n", RENT);
+}
+
+
+void show_printf_return_value()
+{
+    int bph2o = 212;
+    int rv = printf("%d F is water's boiling point.\n", bph2o);
+    printf("The printf() function printed %d characters.\n", rv);
+}
+
+
+void use_scanf()
+{
+    int age;
+    float assets;
+    char pet[30];
+
+    printf("Enter your age, assets, and favorite pet.\n");
+    scanf_s("%d %f", &age, &assets);
+    scanf_s("%s", pet, sizeof(pet));
+    printf("*%d* *$%.2f* *%s*\n", age, assets, pet);
+}
+

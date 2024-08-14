@@ -41,3 +41,23 @@ printf的返回值 表示打印的字节数
 数据对象 左值 右值 运算符
 
 
+类型转换
+
+promotion 升级
+
+parameter 形参
+argument  实参
+
+
+--------------------------------------------------------------------------
+
+#include <conio.h>
+
+无缓冲输入 getche()  /  getch()
+
+
+stdarg.h
+
+尾递归(tail recursion) 相当于循环
+
+

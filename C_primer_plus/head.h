@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <limits.h>
 
+#define MAX_LEN 50
+
 int platinum(void);
 
 void show_int_range();
@@ -50,3 +52,15 @@ void print_squares();
 int wheat(void);
 
 void sizet_usage();
+
+void type_convert();
+
+int echo(void);
+
+void run_recursion(void);
+
+int use_factor(void);
+
+void to_binary(unsigned long n);
+
+int run_swap(void);

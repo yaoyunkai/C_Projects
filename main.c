@@ -13,9 +13,8 @@ int main(void)
     printf("\n");
 #endif
 
-    // print_squares();
+    // int num =  65535;
+    // to_binary(num);
 
-    // wheat();
-
-    sizet_usage();
+    run_swap();
 }

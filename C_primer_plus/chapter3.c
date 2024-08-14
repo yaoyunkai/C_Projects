@@ -36,7 +36,6 @@ void show_int_range()
 }
 
 
-/* bases.c--以十进制、八进制、十六进制打印十进制数100 */
 int show_diff_numbers_and_format()
 {
     long int estine;
@@ -55,7 +54,7 @@ int show_diff_numbers_and_format()
     printf("dec = %d; octal = %o; hex = %x\n", x, x, x);
     printf("dec = %d; octal = %#o; hex = %#x\n", x, x, x);
 
-    unsigned int un = 3000000000; /* int为32位和short为16位的系统 */
+    unsigned int un = 3000000000;
     short end = 200;
     long big = 65537;
     long long verybig = 12345678908642;
@@ -91,7 +90,6 @@ void char_usage()
 
 int use_stdint_and_inttype(void)
 {
-    // me32是一个32位有符号整型变量
     int32_t me32 = 45933945;
     printf("First, assume int32_t is int: ");
     printf("me32 = %d\n", me32);
@@ -131,7 +129,6 @@ void use_float_double()
     // print_float_bits(3.14F);
     // print_double_bits(3.14);
 
-    // 舍入错误
 
     float b = 2.0e20 + 1.0;
     float a = b - 2.0e20;

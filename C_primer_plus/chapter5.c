@@ -67,9 +67,6 @@ void type_convert()
 }
 
 
-/* echo.c -- 重复输入 */
-#include <stdio.h>
-
 int echo(void)
 {
     char ch;
@@ -80,14 +77,8 @@ int echo(void)
     return 0;
 }
 
-/*
 
-递归
-
-
-*/
-
-/* recur.c -- 递归演示 */
+/* recur.c --  */
 void up_and_down(int n)
 {
     printf("Level %d: n location %p\n", n, &n); // #1
@@ -123,7 +114,7 @@ long R_fact(int num)
 }
 
 
-// factor.c -- 使用循环和递归计算阶乘
+// factor.c --
 int use_factor(void)
 {
     int num;
@@ -155,7 +146,6 @@ void to_binary(unsigned long n)
 {
     // printf("max len is %d", MAX_LEN);
 
-    // 当前数的末尾 0 or 1
     unsigned short r = n % 2;
     if (n >= 2)
     {
@@ -165,7 +155,7 @@ void to_binary(unsigned long n)
 }
 
 
-/* swap1.c -- 第1个版本的交换函数 */
+/* swap1.c --  */
 void interchange(int u, int v)
 {
     int temp;
@@ -190,7 +180,6 @@ void run_inner_point(void *p)
     printf("ponit of p self is %p \n", &p);
 }
 
-// 指针的用法
 int run_swap(void)
 {
     int x = 5, y = 10;

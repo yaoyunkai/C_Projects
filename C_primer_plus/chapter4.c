@@ -15,7 +15,7 @@ void talkback()
     char name[40];
 
     printf("Hi! What's your first name?\n");
-    scanf_s("%s", name, sizeof(name));
+    scanf_s("%s", name, (unsigned int) sizeof(name));
 
     printf("%s, what's your weight in pounds?\n", name);
     scanf_s("%f", &weight);
@@ -34,7 +34,7 @@ int praise2(void)
     char name[40];
 
     printf("What's your name? ");
-    scanf_s("%s", name, sizeof(name));
+    scanf_s("%s", name, (unsigned int) sizeof(name));
 
     printf("Hello, %s. %s\n", name, PRAISE);
     printf("Your name of %zd letters occupies %zd memory cells.\n", strlen(name), sizeof name);
@@ -125,7 +125,7 @@ void use_scanf()
 
     printf("Enter your age, assets, and favorite pet.\n");
     scanf_s("%d %f", &age, &assets);
-    scanf_s("%s", pet, sizeof(pet));
+    scanf_s("%s", pet, (unsigned int) sizeof(pet));
     printf("*%d* *$%.2f* *%s*\n", age, assets, pet);
 }
 

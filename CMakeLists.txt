@@ -14,5 +14,6 @@ add_executable(Simple1
         C_primer_plus/crc64.c
         C_primer_plus/utils.c
         C_primer_plus/chapter5.c
+        C_primer_plus/chapter10.c
 
 )

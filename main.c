@@ -13,8 +13,5 @@ int main(void)
     printf("\n");
 #endif
 
-    // int num =  65535;
-    // to_binary(num);
-
-    run_swap();
+    start_use_array();
 }

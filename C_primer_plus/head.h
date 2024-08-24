@@ -66,3 +66,5 @@ void to_binary(unsigned long n);
 int run_swap(void);
 
 void start_use_array();
+
+void use_array_and_point();

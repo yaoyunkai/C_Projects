@@ -13,6 +13,5 @@ int main(void)
     printf("\n");
 #endif
 
-    // start_use_array();
-    use_array_and_point();
+    option_of_opint();
 }

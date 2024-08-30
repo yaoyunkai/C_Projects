@@ -143,13 +143,90 @@ void option_of_opint()
 void const_usage()
 {
     const int days[MONTHS] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    // days[9] = 44;
+    // days[9] = 44;  // not allow
 
     double rates[5] = {11.22, 33.33, 44.44, 55.55};
+    const double locked[4] = {0.08, 0.075, 0.0725, 0.07};
+
     const double *pt = rates;
 
-    // *(pt + 0) = 23.33;
-    // pt[2] = 232;
+    // *(pt + 0) = 23.33;  // not allow
+    // pt[2] = 232;       // not allow
     rates[0] = 99.99;
-    pt++;
+    // pt++;  // let point to next address
+
+    const double *pc = rates;
+    pc = locked;
+    pc = &rates[3];
+
+    double *pnc = locked;
+    // pnc = &rates[3];
+    *pnc = 34.44;
+    // *locked = 34.44;
+
+    for (int i = 0; i < 4; ++i)
+    {
+        printf("%f \n", *(locked + i));
+    }
+}
+
+
+/*
+ * =================================================================================
+ * Multi Array
+ *
+ *
+ */
+
+void multi_array()
+{
+    int zippo[4][2] = {
+        {4, 5},
+        {1, 5},
+        {6, 7},
+        {3, 8}
+    };
+
+    int *ptr1 = zippo;
+
+    for (int i = 0; i < 8; ++i)
+    {
+        printf("%p: %d\n", ptr1 + i, *(ptr1 + i));
+    }
+
+    /*
+    zippo        2 int address
+    zippo[0]     1 int address
+
+     */
+
+    printf("zippo   addr: %p \n", zippo);
+    printf("zippo+1 addr: %p \n", zippo + 1);
+
+    printf("*zippo  = %p \n", *zippo);
+    printf("*zippo[0]  = %d \n", *(zippo[0] + 1));
+
+    printf("   zippo = %p,    zippo + 1 = %p\n", zippo, zippo + 1);
+    printf("zippo[0] = %p, zippo[0] + 1 = %p\n", zippo[0], zippo[0] + 1);
+    printf("  *zippo = %p,   *zippo + 1 = %p\n", *zippo, *zippo + 1);
+    printf("zippo[0][0] = %d\n", zippo[0][0]);
+    printf("  *zippo[0] = %d\n", *zippo[0]);
+    printf("    **zippo = %d\n", **zippo);
+    printf("      zippo[2][1] = %d\n", zippo[2][1]);
+    printf("*(*(zippo+2) + 1) = %d\n", *(*(zippo + 2) + 1));
+
+    int (*pz)[2] = zippo;
+    printf("pz   addr: %p \n", pz);
+    printf("pz+1 addr: %p \n", pz + 1);
+    printf("*pz + 1      addr: %p \n", *pz + 1);
+    printf("*(*pz + 1)  value: %d \n", *(*pz + 1));
+
+    printf("   pz = %p,    pz + 1 = %p\n", pz, pz + 1); // addr , addr + 2*int
+    printf("pz[0] = %p, pz[0] + 1 = %p\n", pz[0], pz[3] + 1); // 0,0  *(pz + 3) + 1  3,1 addr
+    printf("  *pz = %p,   *pz + 1 = %p\n", *pz, *pz + 1); // 0,0 addr / 0,1 addr
+    printf("pz[0][0] = %d\n", pz[0][0]); // 0,0  value
+    printf("  *pz[0] = %d\n", *pz[0]); // 0,0 value
+    printf("    **pz = %d\n", **pz); // 0, 0 value
+    printf("      pz[2][1] = %d\n", pz[2][1]); //
+    printf("*(*(pz+2) + 1) = %d\n", *(*(pz + 2) + 1)); // 2, 1 value
 }

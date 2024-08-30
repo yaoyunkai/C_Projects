@@ -13,5 +13,5 @@ int main(void)
     printf("\n");
 #endif
 
-    option_of_opint();
+    multi_array();
 }

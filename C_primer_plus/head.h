@@ -74,3 +74,7 @@ void point_add_usage();
 void run_with_sum_array();
 
 void option_of_opint();
+
+void const_usage();
+
+void multi_array();

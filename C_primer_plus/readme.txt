@@ -68,3 +68,6 @@ stdarg.h
     int * pt;      // 未初始化的指针
     *pt = 5;       // 严重的错误
 
+
+const int *  : 不能修改值
+int const*   : 不能修改指针本身

@@ -78,3 +78,7 @@ void option_of_opint();
 void const_usage();
 
 void multi_array();
+
+void string_started();
+
+void string_ptr_and_more();

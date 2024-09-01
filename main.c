@@ -13,7 +13,5 @@ int main(void)
     //     printf("\n");
     // #endif
 
-    printf("Hello World\n");
-    // printf("ÄãºÃ ÊÀ½ç\n"); // output to utf8 encoded data
-    multi_array();
+    string_started();
 }

@@ -82,3 +82,13 @@ void multi_array();
 void string_started();
 
 void string_ptr_and_more();
+
+void use_string_with_malloc();
+
+void string_function_usage();
+
+void use_self_external_num();
+
+void use_external_from_chp12();
+
+void use_rand0();

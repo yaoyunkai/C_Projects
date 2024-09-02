@@ -13,5 +13,9 @@ int main(void)
     //     printf("\n");
     // #endif
 
-    string_started();
+    // use_self_external_num();
+    // use_external_from_chp12();
+    // use_self_external_num();
+
+    use_rand0();
 }

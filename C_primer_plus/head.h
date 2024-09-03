@@ -92,3 +92,12 @@ void use_self_external_num();
 void use_external_from_chp12();
 
 void use_rand0();
+
+
+extern int roll_count;
+
+int roll_n_dice(int dice, int sides);
+
+void manydice();
+
+void dyn_array();

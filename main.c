@@ -17,5 +17,5 @@ int main(void)
     // use_external_from_chp12();
     // use_self_external_num();
 
-    use_rand0();
+    dyn_array();
 }

@@ -4,7 +4,7 @@
 #include "C_primer_plus/head.h"
 
 
-int main(void)
+int main(int argc, char *argv[])
 {
     // #if defined(WIN32)
     //     printf("*** running from win32 platform ***\n");
@@ -17,5 +17,7 @@ int main(void)
     // use_external_from_chp12();
     // use_self_external_num();
 
-    dyn_array();
+    // dyn_array();
+
+    start_use_struct();
 }

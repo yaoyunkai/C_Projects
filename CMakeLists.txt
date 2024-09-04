@@ -18,5 +18,7 @@ add_executable(Simple1
         C_primer_plus/chapter11.c
         C_primer_plus/chapter12.c
         C_primer_plus/external_usage.c
+        C_primer_plus/chapter13.c
+        C_primer_plus/chapter14.c
 
 )

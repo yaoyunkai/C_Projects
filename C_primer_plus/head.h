@@ -101,3 +101,7 @@ int roll_n_dice(int dice, int sides);
 void manydice();
 
 void dyn_array();
+
+void count_file_chars(int, char *[]);
+
+void start_use_struct();

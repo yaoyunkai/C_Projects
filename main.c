@@ -3,6 +3,9 @@
 
 #include "C_primer_plus/head.h"
 
+// extern void use_enum();
+
+extern void run_show_bstr();
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +20,5 @@ int main(int argc, char *argv[])
     // use_external_from_chp12();
     // use_self_external_num();
 
-    // dyn_array();
-
-    start_use_struct();
+    run_show_bstr();
 }

@@ -105,3 +105,8 @@ void dyn_array();
 void count_file_chars(int, char *[]);
 
 void start_use_struct();
+
+void start_use_struct_array();
+
+void use_struct_getinfo();
+

@@ -167,7 +167,23 @@ struct 结构体名 {
     若干数据项；
 } 结构体变量名 ；
 
+typedef struct complex {
+     float real;
+     float imag;
+} COMPLEX;
+
 组合后的结构声明和结构变量定义不需要使用结构标记
 
 .比&的优先级高
 
+
+struct demo demo;
+struct demo* ptr;
+
+(*ptr).value;
+
+和数组不同的是，结构变量名并不是结构变量的地址，因此要在结构变量名前面加上&运算符。
+
+union ?????????????
+
+*** 函数指针 和 union ***

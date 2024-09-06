@@ -20,5 +20,8 @@ int main(int argc, char *argv[])
     // use_external_from_chp12();
     // use_self_external_num();
 
-    run_show_bstr();
+    // run_show_bstr();
+
+    float result = findSQRT(34);
+    printf("%f\n", result);
 }

@@ -110,3 +110,6 @@ void start_use_struct_array();
 
 void use_struct_getinfo();
 
+float findSQRT(int number);
+
+

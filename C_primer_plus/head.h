@@ -112,4 +112,6 @@ void use_struct_getinfo();
 
 float findSQRT(int number);
 
+void use_bit_option();
 
+void use_bitfield();

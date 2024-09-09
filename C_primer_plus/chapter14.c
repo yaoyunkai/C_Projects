@@ -250,4 +250,5 @@ void show_bstr(const char *str)
         if (++i % 4 == 0 && str[i])
             putchar(' ');
     }
+    putchar('\n');
 }

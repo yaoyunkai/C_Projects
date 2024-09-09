@@ -3,12 +3,9 @@ project(Simple1 C)
 
 set(CMAKE_C_STANDARD 11)
 
-#set(CMAKE_CXX_CHARSET "UTF-8")
-
 add_executable(Simple1
         main.c
         C_primer_plus/head.h
-        C_primer_plus/print_float_bits.c
         C_primer_plus/crc64.c
         C_primer_plus/utils.c
         C_primer_plus/chapter3.c
@@ -20,5 +17,6 @@ add_executable(Simple1
         C_primer_plus/external_usage.c
         C_primer_plus/chapter13.c
         C_primer_plus/chapter14.c
+        C_primer_plus/chapter15.c
 
 )

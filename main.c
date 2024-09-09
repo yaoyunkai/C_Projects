@@ -1,11 +1,6 @@
 #include <stdio.h>
-// #include <stdlib.h>
 
 #include "C_primer_plus/head.h"
-
-// extern void use_enum();
-
-extern void run_show_bstr();
 
 int main(int argc, char *argv[])
 {
@@ -16,12 +11,6 @@ int main(int argc, char *argv[])
     //     printf("\n");
     // #endif
 
-    // use_self_external_num();
-    // use_external_from_chp12();
-    // use_self_external_num();
-
-    // run_show_bstr();
-
-    float result = findSQRT(34);
-    printf("%f\n", result);
+    float num = 3.1415926f;
+    print_float_bits(num);
 }

@@ -107,6 +107,22 @@ void use_bit_field()
 #define CYAN       (GREEN | BULE)
 #define WHITE      (RED   | GREEN |BULE)
 
+#define OPAQUE        0x1
+#define FILL_BLUE     0x8
+#define FILL_GREEN    0x4
+#define FILL_RED      0x2
+#define FILL_MASK     0xE
+#define BORDER        0x100
+#define BORDER_BLUE   0x800
+#define BORDER_GREEN  0x400
+#define BORDER_RED    0x200
+#define BORDER_MASK   0xE00
+#define B_SOLID       0
+#define B_DOTTED      0x1000
+#define B_DASHED      0x2000
+#define STYLE_MASK    0x3000
+
+
 struct box_props
 {
     bool opaque: 1;
@@ -143,7 +159,29 @@ void show_settings(const struct box_props *pb)
     }
 }
 
-#define N 3
+void show_settings1(unsigned short us)
+{
+    printf("box is %s.\n",
+           (us & OPAQUE) == OPAQUE ? "opaque" : "transparent");
+    printf("The fill color is %s.\n",
+           colors[(us >> 1) & 07]);
+    printf("Border %s.\n",
+           (us & BORDER) == BORDER ? "shown" : "not shown");
+    printf("The border style is ");
+    switch (us & STYLE_MASK)
+    {
+        case B_SOLID: printf("solid.\n");
+            break;
+        case B_DOTTED: printf("dotted.\n");
+            break;
+        case B_DASHED: printf("dashed.\n");
+            break;
+        default: printf("unknown type.\n");
+    }
+    printf("The border color is %s.\n",
+           colors[(us >> 9) & 07]);
+}
+
 
 void use_bitfield()
 {
@@ -158,8 +196,25 @@ void use_bitfield()
     box.border_style = SOLID;
     printf("\nModified box settings:\n");
     show_settings(&box);
-
 }
 
 
-// ================================================================================
+union Views
+{
+    struct box_props st_view;
+    unsigned short us_view;
+};
+
+void use_union_with_bitfield()
+{
+    union Views box = {
+        {true, YELLOW, true, GREEN, DASHED}
+    };
+    char bin_str[100];
+
+    printf("Original box settings: \n");
+    show_settings(&box.st_view);
+
+    printf("Box Settings with integer \n");
+    show_settings1(box.us_view);
+}

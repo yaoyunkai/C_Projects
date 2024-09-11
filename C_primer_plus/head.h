@@ -115,3 +115,5 @@ float findSQRT(int number);
 void use_bit_option();
 
 void use_bitfield();
+
+void use_union_with_bitfield();

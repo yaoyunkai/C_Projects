@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #include "C_primer_plus/head.h"
 
 int main(int argc, char *argv[])
@@ -11,6 +9,5 @@ int main(int argc, char *argv[])
     //     printf("\n");
     // #endif
 
-    float num = 3.1415926f;
-    print_float_bits(num);
+    use_union_with_bitfield();
 }

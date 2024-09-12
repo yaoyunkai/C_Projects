@@ -9,5 +9,5 @@ int main(int argc, char *argv[])
     //     printf("\n");
     // #endif
 
-    use_union_with_bitfield();
+    // use_union_with_bitfield();
 }

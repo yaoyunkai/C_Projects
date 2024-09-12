@@ -218,3 +218,22 @@ void use_union_with_bitfield()
     printf("Box Settings with integer \n");
     show_settings1(box.us_view);
 }
+
+
+/*
+==================================================================================
+==================================================================================
+*/
+
+struct Point
+{
+    int x;
+    int y;
+    int z;
+};
+
+struct Box
+{
+    struct Point p0;
+    struct Point p7;
+};

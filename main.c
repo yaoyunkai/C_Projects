@@ -1,7 +1,6 @@
 #include "C_primer_plus/head.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     // #if defined(WIN32)
     //     printf("*** running from win32 platform ***\n");
     //     system("chcp 65001");
@@ -9,5 +8,7 @@ int main(int argc, char *argv[])
     //     printf("\n");
     // #endif
 
-    // use_union_with_bitfield();
+    use_bit_option();
+
+    return 0;
 }

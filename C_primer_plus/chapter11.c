@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "head.h"
-
 #define MSG "I am a symbolic string constant."
 #define NUM 50
 #define MAX_LENGTH 81
@@ -20,8 +18,9 @@ puts only for char[], and add newline for end
 
 */
 
-void string_started()
-{
+void string_ptr_and_more();
+
+void string_started() {
     char words[MAX_LENGTH] = "I am a string in an array.";
     const char *pt1 = "Something is pointing at me.";
     const char *pt2 = "abcd";
@@ -46,8 +45,7 @@ void string_started()
 }
 
 
-void string_ptr_and_more()
-{
+void string_ptr_and_more() {
     // We  addr
     // *"xx"  : the first char of
     printf("%s, %p, %c\n", "We", "are", *"space farers");
@@ -82,8 +80,7 @@ void string_ptr_and_more()
     ar1[0] = 'X';
     puts(ar1);
 
-    while (*ar2_ptr != '\0')
-    {
+    while (*ar2_ptr != '\0') {
         putchar(*ar2_ptr++);
     }
     puts("");
@@ -97,12 +94,10 @@ void string_ptr_and_more()
     printf("copy = %s; &copy = %p; value = %p\n", copy, &copy, copy);
 }
 
-void use_string_with_malloc()
-{
+void use_string_with_malloc() {
     const int len = 27;
     char *str = malloc(len * sizeof(char));
-    if (NULL == str)
-    {
+    if (NULL == str) {
         exit(1);
     }
 
@@ -136,8 +131,7 @@ void use_string_with_malloc()
 }
 
 
-void puts_usage()
-{
+void puts_usage() {
     // char words[STLEN];
     //
     // puts("Enter a string, please.");
@@ -162,20 +156,17 @@ void puts_usage()
     puts("Done.");
 }
 
-void fit(char *string, unsigned int size)
-{
+void fit(char *string, unsigned int size) {
     if (strlen(string) > size) string[size] = '\0';
 }
 
 
-char *s_gets(char *st, int n)
-{
+char *s_gets(char *st, int n) {
     char *ret_val;
     int i = 0;
 
     ret_val = fgets(st, n, stdin);
-    if (ret_val)
-    {
+    if (ret_val) {
         while (st[i] != '\n' && st[i] != '\0')
             i++;
         if (st[i] == '\n')
@@ -187,8 +178,7 @@ char *s_gets(char *st, int n)
     return ret_val;
 }
 
-void string_function_usage()
-{
+void string_function_usage() {
     // strlen
     char mesg[] = "Things should be as simple as possible, but not simpler.";
     puts(mesg);

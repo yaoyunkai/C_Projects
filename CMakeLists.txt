@@ -5,19 +5,16 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(Simple1
         main.c
-        C_primer_plus/head.h
-        C_primer_plus/utils.c
+        C_primer_plus/common.h
         C_primer_plus/chapter3.c
         C_primer_plus/chapter4.c
         C_primer_plus/chapter5.c
         C_primer_plus/chapter10.c
         C_primer_plus/chapter11.c
         C_primer_plus/chapter12.c
-        C_primer_plus/external_usage.c
         C_primer_plus/chapter13.c
         C_primer_plus/chapter14.c
         C_primer_plus/chapter15.c
-        C_primer_plus/find_dir.c
         C_primer_plus/chapter16.c
 
 )

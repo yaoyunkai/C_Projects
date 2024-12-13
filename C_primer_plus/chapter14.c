@@ -9,15 +9,13 @@
 
 static char *s_gets(char *st, int n);
 
-struct book
-{
+struct book {
     char title[MAXTITL];
     char author[MAXAUTL];
     float value;
 };
 
-struct Demo
-{
+struct Demo {
     int a;
     double b;
     char c;
@@ -26,8 +24,7 @@ struct Demo
 // typedef struct Demo s_demo;
 
 
-void start_use_struct()
-{
+void start_use_struct() {
     // s_demo *data = NULL;
     // data = malloc(sizeof(s_demo));
     // if (NULL == data)
@@ -62,8 +59,7 @@ void start_use_struct()
     };
 }
 
-void start_use_struct_array()
-{
+void start_use_struct_array() {
     struct book library[MAXBKS];
 
     struct book *ptr = library;
@@ -80,8 +76,7 @@ void start_use_struct_array()
     printf("Please enter the book title.\n");
     printf("Press [enter] at the start of a line to stop.\n");
     while (count < MAXBKS && s_gets(library[count].title, MAXTITL) != NULL
-           && library[count].title[0] != '\0')
-    {
+           && library[count].title[0] != '\0') {
         printf("Now enter the author.\n");
         s_gets(library[count].author, MAXAUTL);
         printf("Now enter the value.\n");
@@ -92,8 +87,7 @@ void start_use_struct_array()
             printf("Enter the next title.\n");
     }
 
-    if (count > 0)
-    {
+    if (count > 0) {
         printf("Here is the list of your books:\n");
         for (index = 0; index < count; index++)
             printf("%s by %s: $%.2f\n", library[index].title,
@@ -103,14 +97,12 @@ void start_use_struct_array()
 }
 
 
-static char *s_gets(char *st, int n)
-{
+static char *s_gets(char *st, int n) {
     char *ret_val;
     char *find;
 
     ret_val = fgets(st, n, stdin);
-    if (ret_val)
-    {
+    if (ret_val) {
         find = strchr(st, '\n');
         if (find)
             *find = '\0';
@@ -122,15 +114,13 @@ static char *s_gets(char *st, int n)
 }
 
 
-struct namect
-{
+struct namect {
     char *fname;
     char *lname;
     int letters;
 };
 
-void getinfo(struct namect *ptr)
-{
+void getinfo(struct namect *ptr) {
     char temp[50];
     printf("Please enter your first name.\n");
     s_gets(temp, 50);
@@ -144,20 +134,17 @@ void getinfo(struct namect *ptr)
     strcpy_s(ptr->lname, strlen(temp) + 1, temp);
 }
 
-void showinfo(const struct namect *ptr)
-{
+void showinfo(const struct namect *ptr) {
     printf("%s, %s, your name contains %d letters.\n",
            ptr->fname, ptr->lname, ptr->letters);
 }
 
-void cleanup(struct namect *ptr)
-{
+void cleanup(struct namect *ptr) {
     free(ptr->fname);
     free(ptr->lname);
 }
 
-void use_struct_getinfo()
-{
+void use_struct_getinfo() {
     struct namect person;
 
     getinfo(&person);
@@ -169,8 +156,7 @@ void use_struct_getinfo()
 ========================================================================
  */
 
-void use_enum()
-{
+void use_enum() {
     enum spectrum { red, orange, yellow, green, blue };
     enum spectrum color;
     color = red;
@@ -179,19 +165,16 @@ void use_enum()
 
     printf("red = %d, orange = %d\n", red, orange);
 
-    if (color == yellow)
-    {
+    if (color == yellow) {
         printf("color is not yellow");
-    } else
-    {
+    } else {
         printf("color is yellow");
     }
 }
 
 void ToUpper(char *);
 
-inline void ToUpper(char *val)
-{
+inline void ToUpper(char *val) {
     printf("call toUpper for %s\n", val);
 }
 
@@ -199,8 +182,7 @@ void ToLower(char *);
 
 int round(double);
 
-void use_function_point()
-{
+void use_function_point() {
     void (*pf)(char *);
     // pf = ToLower;
     pf = ToUpper;
@@ -212,8 +194,7 @@ char *itobs(int, char *);
 
 void show_bstr(const char *);
 
-void run_show_bstr()
-{
+void run_show_bstr() {
     char bin_str[CHAR_BIT * sizeof(int) + 1];
     int number = 655;
 
@@ -229,8 +210,7 @@ void run_show_bstr()
     // puts("Bye!");
 }
 
-char *itobs(int n, char *ps)
-{
+char *itobs(int n, char *ps) {
     const static int size = CHAR_BIT * sizeof(int);
 
     for (int i = size - 1; i >= 0; i--, n >>= 1)
@@ -240,12 +220,10 @@ char *itobs(int n, char *ps)
     return ps;
 }
 
-void show_bstr(const char *str)
-{
+void show_bstr(const char *str) {
     int i = 0;
 
-    while (str[i])
-    {
+    while (str[i]) {
         putchar(str[i]);
         if (++i % 4 == 0 && str[i])
             putchar(' ');

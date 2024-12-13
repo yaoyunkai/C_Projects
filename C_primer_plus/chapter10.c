@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void start_use_array()
-{
+void start_use_array() {
     int powers[8] = {1, 2, 4, 6, 8, 16, 32, 64};
 
     int no_data[4];
     int i;
 
-    for (i = 0; i < 4; i++)
-    {
+    for (i = 0; i < 4; i++) {
         printf("%2d%14d\n", i, no_data[i]);
     }
 }
@@ -18,8 +16,7 @@ void start_use_array()
 #define MONTHS 12
 
 
-void use_array_and_point()
-{
+void use_array_and_point() {
     int arr[ARR_LEN] = {1, 2, 3, 4, 5};
     printf("array name:      arr point is %p \n", arr);
     printf("array first  element point is %p \n", &arr[0]);
@@ -27,8 +24,7 @@ void use_array_and_point()
 }
 
 
-void point_add_usage()
-{
+void point_add_usage() {
     short dates[ARR_LEN];
     short *ptr;
 
@@ -40,8 +36,7 @@ void point_add_usage()
     ptf = bills;
 
     printf("%23s %15s\n", "short", "double");
-    for (short index = 0; index < ARR_LEN; index++)
-    {
+    for (short index = 0; index < ARR_LEN; index++) {
         printf("pointers + %d: %10p %10p\n", index, ptr + index, ptf + index);
     }
 
@@ -55,31 +50,26 @@ void point_add_usage()
         printf("Month %2d has %d days.\n", index + 1, *(days + index));
 }
 
-int sum_array(int *arr, int len)
-{
+int sum_array(int *arr, int len) {
     printf("arr addr %p \n", arr);
 
     int total = 0;
-    for (int i = 0; i < len; i++)
-    {
+    for (int i = 0; i < len; i++) {
         total += *(arr + i);
     }
 
     return total;
 }
 
-int sum(const int *arr, int n)
-{
+int sum(const int *arr, int n) {
     int sum = 0;
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         sum += *(arr + i);
     }
     return sum;
 }
 
-void run_with_sum_array()
-{
+void run_with_sum_array() {
     int arr1[ARR_LEN] = {1, 2, 3, 4, 5};
     printf("arr addr: %p \n", arr1);
     printf("arr[0] addr: %p \n", &arr1[0]);
@@ -88,8 +78,7 @@ void run_with_sum_array()
     printf("sum is %d\n", sum);
 
     int *p_arr = malloc(ARR_LEN * sizeof(int));
-    if (NULL == p_arr)
-    {
+    if (NULL == p_arr) {
         exit(1);
     }
 
@@ -104,8 +93,7 @@ void run_with_sum_array()
 }
 
 
-void option_of_opint()
-{
+void option_of_opint() {
     int urn[5] = {100, 200, 300, 400, 500};
     int *ptr1, *ptr2, *ptr3;
 
@@ -140,8 +128,7 @@ void option_of_opint()
 }
 
 
-void const_usage()
-{
+void const_usage() {
     const int days[MONTHS] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     // days[9] = 44;  // not allow
 
@@ -164,8 +151,7 @@ void const_usage()
     *pnc = 34.44;
     // *locked = 34.44;
 
-    for (int i = 0; i < 4; ++i)
-    {
+    for (int i = 0; i < 4; ++i) {
         printf("%f \n", *(locked + i));
     }
 }
@@ -178,8 +164,7 @@ void const_usage()
  *
  */
 
-void multi_array()
-{
+void multi_array() {
     int zippo[4][2] = {
         {4, 5},
         {1, 5},
@@ -189,8 +174,7 @@ void multi_array()
 
     int *ptr1 = zippo;
 
-    for (int i = 0; i < 8; ++i)
-    {
+    for (int i = 0; i < 8; ++i) {
         printf("%p: %d\n", ptr1 + i, *(ptr1 + i));
     }
 

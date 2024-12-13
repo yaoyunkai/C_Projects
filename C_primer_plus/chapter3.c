@@ -3,10 +3,7 @@
 #include <inttypes.h>
 
 
-#include "head.h"
-
-int platinum(void)
-{
+int platinum(void) {
     float weight;
 
     printf("Are you worth your weight in platinum?\n");
@@ -23,8 +20,7 @@ int platinum(void)
     return 0;
 }
 
-void show_int_range()
-{
+void show_int_range() {
     int num = 443;
     printf("the num is %d \n", num);
     printf("the pointer of num is %p \n", &num);
@@ -36,8 +32,7 @@ void show_int_range()
 }
 
 
-int show_diff_numbers_and_format()
-{
+int show_diff_numbers_and_format() {
     long int estine;
     long johns;
     short int erns;
@@ -67,8 +62,7 @@ int show_diff_numbers_and_format()
     return 0;
 }
 
-void show_int_overflow()
-{
+void show_int_overflow() {
     int i = 2147483647;
     unsigned int j = 4294967295;
 
@@ -77,8 +71,7 @@ void show_int_overflow()
 }
 
 
-void char_usage()
-{
+void char_usage() {
     char a, b, c;
     a = 'A';
     b = 66;
@@ -88,8 +81,7 @@ void char_usage()
 }
 
 
-int use_stdint_and_inttype(void)
-{
+int use_stdint_and_inttype(void) {
     int32_t me32 = 45933945;
     printf("First, assume int32_t is int: ");
     printf("me32 = %d\n", me32);
@@ -100,14 +92,13 @@ int use_stdint_and_inttype(void)
     return 0;
 }
 
-void use_float_double()
-{
+void use_float_double() {
     // float noah, jonah;
     // double trouble;
     // float planck = 6.63e-34;
     // long double gnp;
-    printf("long double: %lu byte\n", sizeof(long double));
-    printf("     double: %lu byte\n", sizeof(double));
+    printf("long double: %llu byte\n", sizeof(long double));
+    printf("     double: %llu byte\n", sizeof(double));
 
     float aboat = 32000.0;
     double abet = 2.14e9;

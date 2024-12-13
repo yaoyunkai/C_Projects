@@ -12,12 +12,16 @@ bit
 
 #define LEN 100
 
+/*
+
+refer from chapter14.c
+
+*/
 extern char *itobs(int, char *);
 
 extern void show_bstr(const char *);
 
-void itobs_char(char n, char *ps)
-{
+void itobs_char(char n, char *ps) {
     const static int size = CHAR_BIT * sizeof(char);
 
     for (int i = size - 1; i >= 0; i--, n >>= 1)
@@ -26,8 +30,7 @@ void itobs_char(char n, char *ps)
 }
 
 
-void use_bit_option()
-{
+void use_bit_option() {
     char bin_str[LEN];
 
     printf("byte size of short is %lld\n", sizeof(short));
@@ -71,18 +74,15 @@ void use_bit_option()
     printf("num1 right >> result is %s \n", bin_str);
 }
 
-void use_bit_field()
-{
-    struct
-    {
+void use_bit_field() {
+    struct {
         unsigned int autfd: 1;
         unsigned int bldfc: 1;
         unsigned int undln: 1;
         unsigned int itals: 1;
     } prnt;
 
-    struct
-    {
+    struct {
         unsigned int code1: 2;
         unsigned int code2: 2;
         unsigned int code3: 8;
@@ -123,8 +123,7 @@ void use_bit_field()
 #define STYLE_MASK    0x3000
 
 
-struct box_props
-{
+struct box_props {
     bool opaque: 1;
     unsigned int fill_color: 3;
     unsigned int : 4;
@@ -140,15 +139,13 @@ const char *colors[8] = {
     "blue", "magenta", "cyan", "white"
 };
 
-void show_settings(const struct box_props *pb)
-{
+void show_settings(const struct box_props *pb) {
     printf("Box is %s.\n", pb->opaque == true ? "opaque" : "transparent");
     printf("The fill color is %s.\n", colors[pb->fill_color]);
     printf("Border %s.\n", pb->show_border == true ? "shown" : "not shown");
     printf("The border color is %s.\n", colors[pb->border_color]);
     printf("The border style is ");
-    switch (pb->border_style)
-    {
+    switch (pb->border_style) {
         case SOLID: printf("solid.\n");
             break;
         case DOTTED: printf("dotted.\n");
@@ -159,8 +156,7 @@ void show_settings(const struct box_props *pb)
     }
 }
 
-void show_settings1(unsigned short us)
-{
+void show_settings1(unsigned short us) {
     printf("box is %s.\n",
            (us & OPAQUE) == OPAQUE ? "opaque" : "transparent");
     printf("The fill color is %s.\n",
@@ -168,8 +164,7 @@ void show_settings1(unsigned short us)
     printf("Border %s.\n",
            (us & BORDER) == BORDER ? "shown" : "not shown");
     printf("The border style is ");
-    switch (us & STYLE_MASK)
-    {
+    switch (us & STYLE_MASK) {
         case B_SOLID: printf("solid.\n");
             break;
         case B_DOTTED: printf("dotted.\n");
@@ -183,8 +178,7 @@ void show_settings1(unsigned short us)
 }
 
 
-void use_bitfield()
-{
+void use_bitfield() {
     struct box_props box = {true, YELLOW, true, GREEN, DASHED};
 
     printf("Original box settings:\n");
@@ -199,14 +193,12 @@ void use_bitfield()
 }
 
 
-union Views
-{
+union Views {
     struct box_props st_view;
     unsigned short us_view;
 };
 
-void use_union_with_bitfield()
-{
+void use_union_with_bitfield() {
     union Views box = {
         {true, YELLOW, true, GREEN, DASHED}
     };
@@ -225,15 +217,13 @@ void use_union_with_bitfield()
 ==================================================================================
 */
 
-struct Point
-{
+struct Point {
     int x;
     int y;
     int z;
 };
 
-struct Box
-{
+struct Box {
     struct Point p0;
     struct Point p7;
 };

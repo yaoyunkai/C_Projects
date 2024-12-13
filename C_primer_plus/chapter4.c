@@ -8,8 +8,7 @@
 #define DENSITY 62.4
 #define PRAISE "You are an extraordinary being."
 
-void talkback()
-{
+void talkback() {
     float weight, volume;
     int size, letters;
     char name[40];
@@ -29,8 +28,7 @@ void talkback()
     printf("and we have %d bytes to store it.\n", size);
 }
 
-int praise2(void)
-{
+int praise2(void) {
     char name[40];
 
     printf("What's your name? ");
@@ -45,8 +43,7 @@ int praise2(void)
 }
 
 
-void pizza()
-{
+void pizza() {
     float area, circum, radius;
 
     printf("你的披萨的半径是: \n");
@@ -58,8 +55,7 @@ void pizza()
 }
 
 
-void show_limits()
-{
+void show_limits() {
     printf("Maximum int value on this system = %d\n", INT_MAX);
 
     printf("Some number limits for this system:\n");
@@ -73,8 +69,7 @@ void show_limits()
 }
 
 
-void printf_usage()
-{
+void printf_usage() {
     int number = 7;
     float pies = 12.75;
     int cost = 7800;
@@ -94,8 +89,7 @@ void printf_usage()
     printf("*%-10d*\n", PAGES);
 }
 
-void printf_float_usage()
-{
+void printf_float_usage() {
     const double RENT = 3852.99; // const变量
 
     printf("*%f*\n", RENT);
@@ -109,16 +103,14 @@ void printf_float_usage()
 }
 
 
-void show_printf_return_value()
-{
+void show_printf_return_value() {
     int bph2o = 212;
     int rv = printf("%d F is water's boiling point.\n", bph2o);
     printf("The printf() function printed %d characters.\n", rv);
 }
 
 
-void use_scanf()
-{
+void use_scanf() {
     int age;
     float assets;
     char pet[30];
@@ -128,4 +120,3 @@ void use_scanf()
     scanf_s("%s", pet, (unsigned int) sizeof(pet));
     printf("*%d* *$%.2f* *%s*\n", age, assets, pet);
 }
-
